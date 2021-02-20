@@ -65,7 +65,7 @@
             "name": "LD Library Path",
             "description": "Required to load server libraries.",
             "env_variable": "LD_LIBRARY_PATH",
-            "default_value": ".\/linux64:\\$LD_LIBRARY_PATH",
+            "default_value": ".\/linux64:$LD_LIBRARY_PATH",
             "user_viewable": false,
             "user_editable": false,
             "rules": "required|string"
