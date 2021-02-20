@@ -4,7 +4,7 @@
         "version": "PTDL_v1",
         "update_url": null
     },
-    "exported_at": "2021-02-10T11:36:40-06:00",
+    "exported_at": "2021-02-20T11:36:40-06:00",
     "name": "uModValheim",
     "author": "thewagaming@gmail.com",
     "description": "Install the uMod tool to install Valheim, many things can be used.",
@@ -19,7 +19,7 @@
     },
     "scripts": {
         "installation": {
-            "script": "\r\n#!\/bin\/bash\r\n# Valheim Installation Script\r\n# Colors\r\nGR='\\033[0;32m'\r\nRED='\\033[0;31m'\r\nNC='\\033[0m' # No Color\r\n\r\n# Server Files: \/vhs\/server\r\n# Image to install with is 'debian:buster-slim'\r\napt -y update\r\napt -y --no-install-recommends --no-install-suggests install curl lib32gcc1 ca-certificates\r\n\r\n## create files to install server\r\nmkdir -p \/mnt\/server\/umod\r\ncd \/mnt\/server\/umod\r\nchown -R root:root \/mnt\r\nexport HOME=\/mnt\/server\r\n\r\n# uMod fails otherwise for some reason, even running as root.\r\n# This is changed at the end of the install process anyways.\r\n\r\n## install game using uMod Tool\r\ncd \/mnt\/server\r\ncurl -sSL https:\/\/umod.io\/umod-develop.sh | bash \/dev\/stdin\r\n. ~\/.profile\r\nclear\r\numod install valheim -P\r\nclear\r\numod new launcher valheim -P\r\nchmod +x valheim_server.x86_64",
+            "script": "\r\n#!\/bin\/bash\r\n# Valheim Installation Script\r\n# Colors\r\nGR='\\033[0;32m'\r\nRED='\\033[0;31m'\r\nNC='\\033[0m' # No Color\r\n\r\n# Server Files: \/vhs\/server\r\n# Image to install with is 'debian:buster-slim'\r\napt -y update\r\napt -y --no-install-recommends --no-install-suggests install curl lib32gcc1 ca-certificates\r\n\r\n## create files to install server\r\nmkdir -p \/mnt\/server\/umod\r\ncd \/mnt\/server\/umod\r\nchown -R root:root \/mnt\r\nexport HOME=\/mnt\/server\r\n\r\n# uMod fails otherwise for some reason, even running as root.\r\n# This is changed at the end of the install process anyways.\r\n\r\n## install game using uMod Tool\r\ncd \/mnt\/server\r\ncurl -sSL https:\/\/umod.io\/umod-develop.sh | bash \/dev\/stdin\r\n. ~\/.profile\r\nclear\r\numod install valheim -P\r\nclear\r\numod new launcher valheim -P\r\nchmod +x valheim_server.x86_64\r\nclear\r\n## Deleting old start_server.sh\r\nrm -rf start_server.sh\r\n## Creating new start_server.sh\r\necho #!/bin/bash >> start_server.sh\r\necho export LD_LIBRARY_PATH=./linux64:\$LD_LIBRARY_PATH >> start_server.sh\r\necho while : >> start_server.sh\r\necho do >> start_server.sh\r\necho printf \"\\033c\" >> start_server.sh\r\necho UPDATE_RESULT=$(exec umod update game core apps extensions --patch-available --strict --validate --prerelease) >> start_server.sh\r\necho status = $? >> start_server.sh\r\necho if [ status == 1 ] >> start_server.sh\r\necho then >> start_server.sh\r\necho echo \"Unable to update game, uMod core, or uMod apps\" >> start_server.sh\r\necho elif [ status == 2 ] >> start_server.sh\r\necho then >> start_server.sh\r\necho echo \"No updated needed\" >> start_server.sh\r\necho fi >> start_server.sh\r\necho echo \"Starting server...\" >> start_server.sh\r\necho ./valheim_server.x86_64 -batchmode -nographics -name \"My uMod Server\" -port 2456 -world \"Dedicated\" -password \"secret\" -public 1 >> start_server.sh\r\necho echo \"Restarting server...\" >> start_server.sh\r\necho sleep 10 >> start_server.sh\r\necho done >> start_server.sh",
             "container": "debian:buster-slim",
             "entrypoint": "bash"
         }
