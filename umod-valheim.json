@@ -29,7 +29,7 @@
             "name": "Server Name",
             "description": "Name that appears in server browser.",
             "env_variable": "SERVER_NAME",
-            "default_value": "uMod Server",
+            "default_value": "My Server",
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|string|max:60"
@@ -41,13 +41,13 @@
             "default_value": "2456",
             "user_viewable": true,
             "user_editable": true,
-            "rules": "required|numeric|max:5"
+            "rules": "required|numeric"
         },
         {
             "name": "Server Password",
             "description": "Server password.",
             "env_variable": "PASSWORD",
-            "default_value": "UMODISGOD",
+            "default_value": "secret",
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|string|min:5|max:20"
@@ -69,6 +69,15 @@
             "user_viewable": true,
             "user_editable": false,
             "rules": "nullable|numeric"
+        },
+        {
+            "name": "LD Library Path",
+            "description": "Required to load server libraries.",
+            "env_variable": "LD_LIBRARY_PATH",
+            "default_value": ".\/linux64",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string"
         },
         {
             "name": "Console Filter",
