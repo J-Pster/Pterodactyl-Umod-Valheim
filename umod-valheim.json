@@ -4,7 +4,7 @@
         "version": "PTDL_v1"
     },
     "exported_at": "2021-02-21T15:41:27-03:00",
-    "name": "uModValheim",
+    "name": "uModValheimC",
     "author": "thewagaming@gmail.com",
     "description": "Install the uMod tool to install Valheim, many things can be used.",
     "image": "quay.io\/parkervcp\/pterodactyl-images:debian_dotnet-5",
