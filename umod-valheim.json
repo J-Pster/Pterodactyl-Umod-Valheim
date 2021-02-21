@@ -1,19 +1,14 @@
 {
     "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
     "meta": {
-        "version": "PTDL_v1",
-        "update_url": null
+        "version": "PTDL_v1"
     },
-    "exported_at": "2021-02-21T15:30:33-03:00",
+    "exported_at": "2021-02-21T15:41:27-03:00",
     "name": "uModValheim",
     "author": "thewagaming@gmail.com",
     "description": "Install the uMod tool to install Valheim, many things can be used.",
-    "features": null,
-    "images": [
-        "quay.io\/parkervcp\/pterodactyl-images:debian_dotnet-5"
-    ],
-    "file_denylist": "",
-    "startup": ". ~\/.profile | umod install valheim -P | umod new launcher valheim -P --force | chmod +x valheim_server.x86_64 | export LD_LIBRARY_PATH=.\/linux64:$LD_LIBRARY_PATH | .\/valheim_server.x86_64 -nographics -batchmode -name \"{{SERVER_NAME}}\" -port {{SERVER_PORT}} -public 1 -world \"{{WORLD}}\" -password \"{{PASSWORD}}\" > >(sed -uE \"{{FILTER}}\") & trap \"{{STOP}}\" 15; wait $!",
+    "image": "quay.io\/parkervcp\/pterodactyl-images:debian_dotnet-5",
+    "startup": "export LD_LIBRARY_PATH=.\/linux64:$LD_LIBRARY_PATH | .\/valheim_server.x86_64 -nographics -batchmode -name \"{{SERVER_NAME}}\" -port {{SERVER_PORT}} -public 1 -world \"{{WORLD}}\" -password \"{{PASSWORD}}\" > >(sed -uE \"{{FILTER}}\") & trap \"{{STOP}}\" 15; wait $!",
     "config": {
         "files": "{}",
         "startup": "{\r\n    \"done\": \"DungeonDB Start\"\r\n}",
@@ -32,9 +27,9 @@
             "name": "Server Name",
             "description": "Name that appears in server browser.",
             "env_variable": "SERVER_NAME",
-            "default_value": "uMod CastBlack",
-            "user_viewable": true,
-            "user_editable": true,
+            "default_value": "uMod & CastBlack",
+            "user_viewable": 1,
+            "user_editable": 1,
             "rules": "required|string|max:60"
         },
         {
@@ -42,8 +37,8 @@
             "description": "Server password.",
             "env_variable": "PASSWORD",
             "default_value": "umodgods",
-            "user_viewable": true,
-            "user_editable": true,
+            "user_viewable": 1,
+            "user_editable": 1,
             "rules": "required|string|min:5|max:20"
         },
         {
@@ -51,8 +46,8 @@
             "description": "Name to load if switching between multiple saved worlds.",
             "env_variable": "WORLD",
             "default_value": "Dedicated",
-            "user_viewable": true,
-            "user_editable": true,
+            "user_viewable": 1,
+            "user_editable": 1,
             "rules": "required|string|max:20"
         },
         {
@@ -60,8 +55,8 @@
             "description": "Valheim steam app id for auto updates.",
             "env_variable": "SRCDS_APPID",
             "default_value": "896660",
-            "user_viewable": true,
-            "user_editable": false,
+            "user_viewable": 1,
+            "user_editable": 0,
             "rules": "nullable|numeric"
         },
         {
@@ -69,8 +64,8 @@
             "description": "Required to load server libraries.",
             "env_variable": "LD_LIBRARY_PATH",
             "default_value": ".\/linux64:$LD_LIBRARY_PATH",
-            "user_viewable": false,
-            "user_editable": false,
+            "user_viewable": 0,
+            "user_editable": 0,
             "rules": "required|string"
         },
         {
@@ -78,8 +73,8 @@
             "description": "Remove spam from the console output.",
             "env_variable": "FILTER",
             "default_value": "\/^\\(Filename:.*Line:[[:space:]]+[[:digit:]]+\\)$\/d; \/^([[:space:]]+)?$\/d",
-            "user_viewable": false,
-            "user_editable": false,
+            "user_viewable": 0,
+            "user_editable": 0,
             "rules": "string"
         },
         {
@@ -87,8 +82,8 @@
             "description": "Commands to trigger a server shutdown.",
             "env_variable": "STOP",
             "default_value": "kill -2 $!; wait;",
-            "user_viewable": false,
-            "user_editable": false,
+            "user_viewable": 0,
+            "user_editable": 0,
             "rules": "required|string"
         }
     ]
