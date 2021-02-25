@@ -3,11 +3,11 @@ I need help to make automatic updates in the game, I tried to use umod to update
 ```Read-only file system (System.IO.FileSystem)n /builds/umod/tools/agent/src/uMod.Agent/Commands/Install.cs:line 436```
 ```at System.IO.FileSystem.CreateDirectory(String fullPath)ools/agent/src/uMod.Agent/Commands/Update.cs:line 157```
 ```at System.IO.Directory.CreateDirectory(String path)umod/tools/agent/src/uMod.Agent/Commands/Command.cs:line 279
-   at System.IO.Compression.ZipFileExtensions.ExtractRelativeToDirectory(ZipArchiveEntry source, String destinationDirectoryName, Boolean overwrite)ndleCommand(IEnumerable`1 args) in /builds/umod/tools/agent/src/uMod.Agent/Service.cs:line 278
-   at System.IO.Compression.ZipFileExtensions.ExtractToDirectory(ZipArchive source, String destinationDirectoryName, Boolean overwriteFiles)e 20:    14 Aborted                 (core dumped) umod update valheim -P
-   at System.IO.Compression.ZipFile.ExtractToDirectory(String sourceArchiveFileName, String destinationDirectoryName, Encoding entryNameEncoding, Boolean overwriteFiles)
-   at System.IO.Compression.ZipFile.ExtractToDirectory(String sourceArchiveFileName, String destinationDirectoryName, Boolean overwriteFiles): Exit code: 0
-   at uMod.Agent.Commands.Install.InstallDepotDownloader() in /builds/umod/tools/agent/src/uMod.Agent/Commands/Install.cs:line 1165yl Daemon]: Updating process configuration files...```
+   ```at System.IO.Compression.ZipFileExtensions.ExtractRelativeToDirectory(ZipArchiveEntry source, String destinationDirectoryName, Boolean overwrite)ndleCommand(IEnumerable`1 args) in /builds/umod/tools/agent/src/uMod.Agent/Service.cs:line 278```
+   ```at System.IO.Compression.ZipFileExtensions.ExtractToDirectory(ZipArchive source, String destinationDirectoryName, Boolean overwriteFiles)e 20:    14 Aborted                 (core dumped) umod update valheim -P```
+   ```at System.IO.Compression.ZipFile.ExtractToDirectory(String sourceArchiveFileName, String destinationDirectoryName, Encoding entryNameEncoding, Boolean overwriteFiles)```
+   ```at System.IO.Compression.ZipFile.ExtractToDirectory(String sourceArchiveFileName, String destinationDirectoryName, Boolean overwriteFiles): Exit code: 0```
+   ```at uMod.Agent.Commands.Install.InstallDepotDownloader() in /builds/umod/tools/agent/src/uMod.Agent/Commands/Install.cs:line 1165yl Daemon]: Updating process configuration files...```
 
 I tried using SteamCmd, but this error happens: ``/home/container/steamcmd/linux32/steamcmd: No such file or directory``
 
