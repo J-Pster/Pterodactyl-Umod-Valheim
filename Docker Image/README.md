@@ -25,9 +25,7 @@ Everyone who helps will be considered a contributor, and I will be very grateful
 
 The server name is having problems, it is not identifying SPACES.
 
-Example: "Umod Server Side"
-
-Output: Umod
+Example = Input: "Umod Server Side" | Output: Umod
 
 # Dockerfile
 I am using a self-made Dockerfile to make the server run lighter and also to make automatic updates to the Core.
