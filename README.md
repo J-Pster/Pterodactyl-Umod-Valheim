@@ -13,6 +13,10 @@ To use this script, just do as any other, however there are a few things that mu
 1. When you install a server and choose the port, you must release the next port also, example: 2456 and 2457
 2. This EGG was tested on Pterodactyl version 0.7 and 1.0 - All works
 
+# Auto Update
+Core, Apps, Extensions - ✅
+Game - ❌
+
 # About us
 We are passionate about programming, and are venturing into valheim, if you want to know more about us, check out our LinkedIn.
 
