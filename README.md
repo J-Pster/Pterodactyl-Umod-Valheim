@@ -15,6 +15,7 @@ To use this script, just do as any other, however there are a few things that mu
 
 # Auto Update
 Core, Apps, Extensions - ✅
+
 Game - ❌
 
 # About us
