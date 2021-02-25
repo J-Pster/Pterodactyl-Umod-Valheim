@@ -9,6 +9,14 @@ I also need help removing this from the Output: ``/^\(Filename:.*Line:[[:space:]
 
 Everyone who helps will be considered a contributor, and I will be very grateful for their help.
 
+# Other Problems
+
+The server name is having problems, it is not identifying SPACES.
+
+Example: "Umod Server Side"
+
+Output: Umod
+
 # Dockerfile
 I am using a self-made Dockerfile to make the server run lighter and also to make automatic updates to the Core.
 
