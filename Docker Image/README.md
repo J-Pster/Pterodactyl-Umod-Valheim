@@ -1,7 +1,7 @@
 # Help me
 I need help to make automatic updates in the game, I tried to use umod to update the game, however, this error happens: 
-```Read-only file system (System.IO.FileSystem)n /builds/umod/tools/agent/src/uMod.Agent/Commands/Install.cs:line 436
-   at System.IO.FileSystem.CreateDirectory(String fullPath)ools/agent/src/uMod.Agent/Commands/Update.cs:line 157```
+```Read-only file system (System.IO.FileSystem)n /builds/umod/tools/agent/src/uMod.Agent/Commands/Install.cs:line 436```
+```at System.IO.FileSystem.CreateDirectory(String fullPath)ools/agent/src/uMod.Agent/Commands/Update.cs:line 157```
 
 I tried using SteamCmd, but this error happens: ``/home/container/steamcmd/linux32/steamcmd: No such file or directory``
 
