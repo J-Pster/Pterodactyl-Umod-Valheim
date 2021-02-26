@@ -14,18 +14,8 @@ To use this script, just do as any other, however there are a few things that mu
 2. This EGG was tested on Pterodactyl version 0.7 and 1.0 - All works
 
 # Auto Update
-Core, Apps, Extensions - ✅
+Core, Apps, Extensions, Game - ✅
 
-Game - ❌
-
-# About us
-We are passionate about programming, and are venturing into valheim, if you want to know more about us, check out our LinkedIn.
-
-https://www.linkedin.com/in/joaopedrovianafreitas/
-
-https://www.linkedin.com/in/matheus-benites-2653a6129/
-
-# Contributors
-CastBlacKing: https://github.com/Toxic-Storm/
-
-Benites: https://github.com/math-benites/
+## Credits
+CastBlacKing
+Softwarenoob
