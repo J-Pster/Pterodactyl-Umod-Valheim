@@ -18,6 +18,9 @@ To use this script, just do as any other, however there are a few things that mu
 1. All - Set Auto Update Variable to 1
 2. Only Plugins - Set Auto Update Variable to 0 > Set Update Plugins to 1
 
+## Docker Image (hub.docker) Link
+https://hub.docker.com/repository/docker/castblacking/umod-valheim
+
 ## Credits
 CastBlacKing
 Softwarenoob
