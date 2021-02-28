@@ -24,8 +24,3 @@ CastBlacKing, Softwarenoob
 
 ### Docker Image (hub.docker) Link
 https://hub.docker.com/repository/docker/castblacking/umod-valheim
-
-### Pull Requests / Forks
-https://github.com/parkervcp/images/pull/78 
-
-https://github.com/parkervcp/eggs/pull/1010
