@@ -22,6 +22,7 @@ To use this script, just do as any other, however there are a few things that mu
 ## Credits
 CastBlacKing, Softwarenoob (Update System)
 
-#### Links
+### Links
 https://hub.docker.com/repository/docker/castblacking/umod-valheim
+
 https://umod.org
