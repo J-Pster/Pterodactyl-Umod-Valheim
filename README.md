@@ -20,7 +20,8 @@ To use this script, just do as any other, however there are a few things that mu
 3. IF your server has any errors when Auto-Update, go to Settings, and click REINSTALL SERVER. **(DON'T WORRY, YOUR SERVER WON'T HAVE ANY CORRUPTED OR DELETED FOLDERS, IT WILL JUST BE UPDATED!)**
 
 ## Credits
-CastBlacKing, Softwarenoob
+CastBlacKing, Softwarenoob (Update System)
 
-### Docker Image (hub.docker) Link
+#### Links
 https://hub.docker.com/repository/docker/castblacking/umod-valheim
+https://umod.org
