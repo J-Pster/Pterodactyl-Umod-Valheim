@@ -19,6 +19,10 @@ To use this script, just do as any other, however there are a few things that mu
 2. Only Plugins - Set Auto Update Variable to 0 > Set Update Plugins to 1
 3. IF your server has any errors when Auto-Update, go to Settings, and click REINSTALL SERVER. **(DON'T WORRY, YOUR SERVER WON'T HAVE ANY CORRUPTED OR DELETED FOLDERS, IT WILL JUST BE UPDATED!)**
 
+### How to Update EGG (500 Error Code)
+1. Delete OLD egg.
+2. Upload NEW egg.
+
 ## Credits
 CastBlacKing, Softwarenoob (Update System)
 
