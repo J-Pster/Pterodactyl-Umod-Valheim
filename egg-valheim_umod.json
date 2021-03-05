@@ -106,7 +106,7 @@
         },
         {
             "name": "Make Backups",
-            "description": "Do you want the system to make automatic copies of your server, if yes check TRUE, if no check FALSE.",
+            "description": "Do you want the system to make automatic copies of your server, if yes check TRUE, if no check FALSE. //TODO",
             "env_variable": "MAKE_BACKUPS",
             "default_value": "false",
             "user_viewable": true,
