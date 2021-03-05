@@ -1,5 +1,5 @@
 #!/bin/sh
-if ${MAKE_BACKUPS}
+if [[ ${MAKE_BACKUPS} == "1" ]]
 then
 NumToKeep=144
 BackupFolderPath=/home/container/valheimbackups/
