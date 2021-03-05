@@ -1,4 +1,6 @@
 #!/bin/sh
+if ${MAKE_BACKUPS}
+then
 NumToKeep=144
 BackupFolderPath=/home/container/valheimbackups/
 Worldsavelocation=/home/container/worlds/
@@ -8,3 +10,4 @@ rm -f $Worldsavelocation*.old
 tar -czf $BackupFolderPath$Date.tar.gz $Worldsavelocation
 ls -dt $BackupFolderPath* | tail -n +$Sum | xargs rm -rf
 echo "world backup done"
+fi
