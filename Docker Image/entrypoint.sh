@@ -62,5 +62,13 @@ fi
 MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')
 echo -e ":/home/container$ ${MODIFIED_STARTUP}"
 
+# Create Backupfolder
+BackupFolderPath=/home/container/valheimbackups
+if [[ ! -d $BackupFolderPath ]]
+then
+echo "$BackupFolderPath does not exist on your filesystem."
+mkdir $BackupFolderPath
+fi
+
 # Run the Server
 eval ${MODIFIED_STARTUP}

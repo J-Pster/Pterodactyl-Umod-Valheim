@@ -15,7 +15,7 @@ RUN apt update -y \
     && wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb \
     && dpkg -i packages-microsoft-prod.deb \
     && apt update -y \  
-    && apt install -y dotnet-sdk-5.0 aspnetcore-runtime-5.0 libgdiplus
+    && apt install -y dotnet-sdk-5.0 aspnetcore-runtime-5.0 libgdiplus entr supervisor
 
 ## add container user
 USER    container
@@ -37,4 +37,6 @@ RUN export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1 \
 WORKDIR /home/container
 
 COPY ./entrypoint.sh /entrypoint.sh
-CMD ["/bin/bash", "/entrypoint.sh"]
+COPY ./valheimbackup.sh /valheimbackup.sh
+COPY ./supervisord.conf /etc/supervisor/conf.d/default.conf
+CMD ["supervisord", "-c", "/etc/supervisor/conf.d/default.conf"]
